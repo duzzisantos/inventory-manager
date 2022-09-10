@@ -1,6 +1,6 @@
 module.exports = {
     HOST: "localhost",
     USER: "root",
-    PASSWORD: "",
-    DB: "ventoryDB"
+    PASSWORD: entrer le votre,
+    DB: "name yours"
 };
