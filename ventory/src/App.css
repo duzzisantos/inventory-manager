@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Poppins:wght@300&family=Quicksand&display=swap");
+
+.App {
+  margin-top: 0px;
+  color: white;
+  background-image: linear-gradient(to right, black, #343434);
+  font-family: "Manrope", sans-serif;
+}
+
+/* navigation components */
+.navbar {
+  height: 120px;
+  width: 100%;
+  bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+#hamburger {
+  height: 60px;
+  width: 40px;
+  color: white;
+  font-size: 35px;
+  display: none;
+  position: absolute;
+  margin-top: 28px;
+  padding: 10px 10px;
+  text-align: center;
+}
+#nav-list {
+  height: 120px;
+  width: 650px;
+  text-align: center;
+  margin-left: 60px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.nav-items {
+  height: 100px;
+  width: 80%;
+  margin-top: 0px;
+}
+.nav-items li {
+  display: inline-block;
+  margin: 20px;
+  font-size: 18px;
+}
+
+.nav-items li:nth-child(1){
+  margin-left: 0px;
+}
+.links {
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  color: #08b883;
+}
+.logo {
+  font-size: 25px; /*This is 41.7% of the Navbar height*/
+  padding-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+}
+
+/* body wrapper */
+.container {
+  height: fit-content;
+  width: 100%;
+  background-color: white;
+  padding-top: 20px;
+  color: #343434;
+}
+
+/* data summary (big numbers) */
+
+.summary {
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+.big-numbers {
+  height: 120px;
+  width: 240px;
+  border: 1px solid rgb(207, 203, 203);
+  border-style: dotted;
+  margin-left: 10px;
+  border-radius: 2px;
+  text-align: center;
+  padding-top: 7px;
+}
+
+.big-numbers:hover {
+  box-shadow: 0px 0px 1px black;
+  color: black;
+}
+.category {
+  font-size: 14px;
+}
+
+.count {
+  font-size: 25px;
+}
+.left {
+  font-size: 11px;
+  display: block;
+  font-weight: none;
+  color: grey;
+}
+
+/* warehouse status */
+
+.inventory-status {
+  height: 815px;
+  width: 75%;
+  margin-left: 12.75%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard {
+  height: 400px;
+  width: 99%;
+  border: 1px solid transparent;
+  border-top: 2px solid rgb(224, 221, 221);
+  border-style: dotted;
+  margin: 30px;
+}
+
+.dashboard:nth-child(even) {
+  margin-bottom: 30px;
+}
+
+/* dashboard 1*/
+.select-wrapper,
+.display-key {
+  height: 60px;
+  width: 250px;
+  display: inline-block;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+select {
+  margin-top: 10px;
+  font-size: 14px;
+  width: 250px;
+  padding: 4px;
+  border: 1px solid rgb(199, 185, 185);
+  background-color: transparent;
+  outline: none;
+  border-radius: 2px;
+}
+
+select:hover {
+  box-shadow: 0px 0px 1px black;
+}
+#key-color-low,
+#key-color-medium,
+#key-color-high {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+#key-color-low {
+  background-color: #ff101f;
+}
+
+#key-color-medium {
+  background-color: #ff8484;
+}
+
+#key-color-high {
+  background-color: #08b883;
+}
+
+.colors {
+  display: block;
+  height: 30px;
+}
+
+.captions span {
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 23px;
+}
+
+/*dashboard 2*/
+
+.reorder {
+  margin-left: 25px;
+  width: fit-content;
+  padding-top: 15px;
+}
+
+.reorder h5,
+.shelf-form h5 {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+th,
+td {
+  width: 200px;
+  text-align: center;
+}
+
+/*toggle button*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #08b883;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #08b883;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+img {
+  height: 50px;
+  width: 80px;
+}
+
+/* New inventory */
+
+.new-inventory {
+  height: 600px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-style: dotted;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35%;
+}
+
+.new-inventory h3 {
+  text-align: center;
+}
+.new-inventory span {
+  font-size: 12px;
+  margin-left: 25px;
+  color: #08b883;
+}
+
+.new-inventory label {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #343434;
+  font-weight: 600;
+  margin-left: 25px;
+}
+
+#officer,
+#batch-number,
+#batch-units,
+#product-image,
+#date-time,
+.new-inventory select {
+  width: calc(400px - 60px);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.new-inventory select {
+  width: calc(400px - 50px);
+}
+
+.new-inventory select:hover {
+  box-shadow: 0px 0px 1px black;
+}
+.new-inventory input:hover {
+  box-shadow: 0px 0px 1px black;
+}
+#submit-btn {
+  width: 120px;
+  padding: 5px;
+  border: 1px solid #08b883;
+  border-radius: 2px;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+#submit-btn:hover {
+  background-color: #08b883;
+  color: white;
+}
+
+/* Sales display */
+
+.sales-period,
+.sold-items,
+.select-period {
+  margin: 10px;
+}
+
+.chart-holder {
+  height: 350px;
+  width: 100%;
+  background-color: rgb(247, 245, 245);
+  border-bottom: 3px solid #08b883;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.bar-chart {
+  width: 9%;
+  background-color: cyan;
+  height: calc(
+    (350px - 3px) * 0.9
+  ); /* this is the chart holder height minus the border size times 90% of the chart-holder box */
+  margin-top: auto;
+  margin-left: 1%;
+  display: inline-block;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+}
+
+.bar-chart:nth-child(even) {
+  background-color: teal;
+  color: whitesmoke;
+  height: 200px;
+}
+
+/* Shelf display */
+
+.select-product,
+.select-amount,
+.refill-product {
+  width: 140px;
+  padding: 6px;
+  margin-top: -1px;
+}
+
+.shelf-form {
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d3cfcf;
+  border-style: dotted;
+  margin-top: 10px;
+  padding: 15px 15px;
+  font-size: 14px;
+}
+
+/* Responsiveness */
+
+/* Bigger Tablets */
+@media only screen and (max-width: 860px) {
+  #nav-list {
+    display: none;
+  }
+
+  #hamburger {
+    display: inline-block;
+    margin-left: 75%;
+  }
+
+  .big-numbers {
+    margin: 2px;
+  }
+  .dashboard {
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  .dashboard select{
+    width: 160px;
+    font-size: small;
+  }
+
+  .shelf-form select{
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .reorder{
+    margin-top: 40px;
+    margin-left: 15px;
+  }
+
+  .reorder h5, tr, th, td{
+    font-size: 12px;
+  }
+  .new-inventory{
+    margin-left: 27%;
+    font-size: smaller;
+  }
+}
+
+/* Regular Tablets */
+@media only screen and (max-width: 768px) {
+  #hamburger {
+    margin-left: 65%;
+  }
+  aside {
+    position: relative;
+    width: 50px;
+    display: block;
+    transform: rotate(-90deg);
+    margin-left: -10px;
+    padding-right: 22px;
+    margin-top: 60%;
+  }
+  .display-key{
+    margin-left: -5px;
+  }
+
+  .new-inventory{
+    margin-left: 23%;
+  }
+}
+
+/* Mobile phones */
+
+@media only screen and (max-width: 600px) {
+  #hamburger {
+    margin-left: 60%;
+  }
+  .new-inventory{
+    margin-left: 12%;
+  }
+}
