@@ -1,18 +1,16 @@
 const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
-const Warehouse = new Schema({
+const Warehouse = new Schema(
+  {
     officer: String,
     category: String,
     product: String,
     batchNumber: Number,
     batchUnits: Number,
     productImage: String,
-    date: String
-},
-{
-    timestamps: true
-}
-)
+    date: String,
+  }
+);
 
-module.exports = mongoose.model("sales", Warehouse)
+module.exports = mongoose.model("warehouse", Warehouse);

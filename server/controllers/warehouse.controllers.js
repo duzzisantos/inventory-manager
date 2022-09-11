@@ -76,7 +76,7 @@ exports.removeOneWarehouseData = (req, res) => {
       if (!item) {
         console.log(res.status(403), ": Forbidden request");
       } else {
-        console.log(res.status(200),": Deleted one warehouse data");
+        console.log(res.status(200), ": Deleted one warehouse data");
       }
     })
     .catch((error) => {
@@ -86,13 +86,13 @@ exports.removeOneWarehouseData = (req, res) => {
 
 //Delete many
 exports.removeAllWarehouseData = (req, res) => {
-    Warehouse.deleteMany({})
-    .then(item => {
-        console.log(res.status(200), ": Deleted all warehouse data")
-        console.log(item)
+  Warehouse.deleteMany({})
+    .then((item) => {
+      console.log(res.status(200), ": Deleted all warehouse data");
+      console.log(item);
     })
-    .catch(error => {
-        console.log(res.status(403), ": Forbidden request")
-        console.log(error)
-    })
-}
+    .catch((error) => {
+      console.log(res.status(403), ": Forbidden request");
+      console.log(error);
+    });
+};
