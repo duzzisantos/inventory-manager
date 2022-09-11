@@ -1,11 +1,18 @@
-`CREATE TABLE  'warehouse'(
-    ID INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    CATEGORY VARCHAR(50) NOT NULL,
-    PRODUCT VARCHAR(100),
-    BATCH_NUMBER INT(20),
-    ENTRY_DATE VARCHAR(15),
-    OFFICER_NAME VARCHAR(50),
-    PRODUCT_IMAGE VARCHAR(2048),
-    BATCH_AMOUNT INT(11),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;`
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
+const Warehouse = new Schema({
+    officer: String,
+    category: String,
+    product: String,
+    batchNumber: Number,
+    batchUnits: Number,
+    productImage: String,
+    date: String
+},
+{
+    timestamps: true
+}
+)
+
+module.exports = mongoose.model("sales", Warehouse)
