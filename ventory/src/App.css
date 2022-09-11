@@ -414,9 +414,15 @@ img {
   font-size: 14px;
 }
 
+/*changes the color of the options in the form select*/
+#product *, #category * {
+  background-color: rgb(250, 246, 246);
+}
+
+
 /* Responsiveness */
 
-/* Bigger Tablets */
+  /* Bigger Tablets */
 @media only screen and (max-width: 860px) {
   #nav-list {
     display: none;
@@ -459,7 +465,7 @@ img {
   }
 }
 
-/* Regular Tablets */
+  /* Regular Tablets */
 @media only screen and (max-width: 768px) {
   #hamburger {
     margin-left: 65%;
@@ -482,7 +488,7 @@ img {
   }
 }
 
-/* Mobile phones */
+   /* Mobile phones */
 
 @media only screen and (max-width: 600px) {
   #hamburger {

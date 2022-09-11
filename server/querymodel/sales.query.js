@@ -6,7 +6,7 @@ class Sales {
         this.category = sales.category;
         this.product = sales.product;
         this.batch_number = sales.batch_number;
-        this.batch_date = sales.date;
+        this.batch_date = sales.batch_date;
         this.officer_name = sales.officer_name;
         this.product_image = sales.product_image;
         this.batch_amount = sales.batch_amount;
