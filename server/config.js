@@ -1,6 +1,4 @@
 module.exports = {
-    HOST: "localhost",
-    USER: "root",
-    PASSWORD: entrer le votre,
-    DB: "name yours"
-};
+    url: "mongodb+srv://ucheabba:barcelonaG22@cluster0.1s7zq.mongodb.net/ventorify?retryWrites=true&w=majority"
+}
+
